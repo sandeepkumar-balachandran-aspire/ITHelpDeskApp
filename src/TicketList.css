@@ -1,0 +1,42 @@
+/* Filename - App.css*/
+.TicketTable {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+}
+
+table {
+	border: 1px solid forestgreen;
+	width: 800px;
+	height: 200px;
+}
+
+.ticket-row td{
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.ticket-row td:last-child {
+ border-right: none !important;
+}
+
+table tr:last-child td{
+    border-bottom: none !important;
+}
+
+.ticketheader-row th:last-child{
+	border-right: none !important;
+}
+
+.ticketheader-row th{
+	border-right: 1px solid black;
+}
+
+th {
+	border-bottom: 1px solid black;
+}
+
+td {
+	text-align: center;
+}
