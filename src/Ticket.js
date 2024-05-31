@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import TicketForm from './TicketForm';
 
@@ -15,12 +15,13 @@ const Ticket = () => {
   const createTicket = async () => {
     try {
 
-      if(reporter != "" && priority != 0 
-      && category != 0 && description != ""
-      && assignToMe != null && resolution != ""
-      && isThereAnyResolution !="" ){
+      if(reporter !== "" && priority !== 0 
+      && category !== 0 && description !== ""
+      && assignToMe !== null && resolution !== ""
+      && isThereAnyResolution !=="" ){
         const response = await axios.post('https://ithelpdeskwebapi.azurewebsites.net/api/Ticket',
         { reporter, priority , category, description, assignToMe, isThereAnyResolution, resolution  });
+        console.log(response);
         clearForm();
       }
     } catch (error) {
